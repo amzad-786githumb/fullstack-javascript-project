@@ -43,6 +43,11 @@ const searchRoutes = require('./routes/searchRoutes');
 app.use('/api/search', searchRoutes);
 
 
+// Default Route for React App
+app.get('/app/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'react-app', 'index.html'));
+});
+
 // Global Error Handler
 app.use((err, req, res, next) => {
     console.error(err);
