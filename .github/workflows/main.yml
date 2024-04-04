@@ -4,8 +4,6 @@ on:
     branches: [master, main]
   pull_request:
     branches: [master, main]
-env:
-  ci: ""
 jobs:
   lint_js:
       name: Lint JavaScript Files
@@ -30,6 +28,8 @@ jobs:
   client_build:
       name: Build client
       runs-on: ubuntu-latest
+      env:
+        ci: ''
       steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
