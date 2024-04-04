@@ -1,6 +1,4 @@
 name: 'CI/CD'
-env:
-  CI:''
 on:
   push:
     branches: [master, main]
