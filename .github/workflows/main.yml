@@ -29,7 +29,7 @@ jobs:
       name: Build client
       runs-on: ubuntu-latest
       env:
-        ci: ''
+        CI: ''
       steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
