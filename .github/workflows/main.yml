@@ -1,4 +1,6 @@
 name: 'CI/CD'
+env:
+  CI:''
 on:
   push:
     branches: [master, main]
@@ -41,5 +43,3 @@ jobs:
           npm install
           npm run build
           echo "Client-side build successfully"
-        env:
-          CI:''
